@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title> Even Odd Finder by Kamal Sir </title>
+		<style>
+			* { font-size:40px; }
+			body { background-color: lightblue; }
+			.btn { width:20%; background-color:red; color:white;}
+			.nav { background-color:black; }
+			.nav a { color:white; text-decoration:none; margin:80px;}
+		</style>
+		<script>
+			function compute()	
+			{
+			event.preventDefault();
+			let num = document.getElementById("id_num");
+			let msg = document.getElementById("id_msg");
+				
+			if (num.value == "")
+			{	
+			alert("u did not enter integer");
+			msg.innerHTML = "";
+			num.focus();
+			return;
+			}
+			let n = parseInt(num.value);
+			let res = n % 2 == 0 ? "even" : "odd";
+			msg.innerHTML = res;
+			}
+		</script>
+	</head>
+
+	<body>
+	<center>
+		<div class="nav">
+			<a href="index.html"> Home </a>
+			<a href="about.html"> About </a>
+		</div>
+	<h1> Even Odd Finder </h1>
+	<form onsubmit="compute()">
+	<input type="number" placeholder="enter integer" id="id_num"/>
+	<br><br>
+	<input type="submit" value="Find Even/Odd" class="btn" />
+	</form>	
+	<h2 id="id_msg"> </h2>
+	</center>
+	</body>
+</html>
+
+
+
+
+
+
+
